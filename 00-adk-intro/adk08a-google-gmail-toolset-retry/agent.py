@@ -4,6 +4,9 @@ from google.adk.agents import Agent
 from google.genai import types
 from google.adk.tools.google_api_tool import GmailToolset
 
+from google.adk.apps import App
+from google.adk.plugins.reflect_retry_tool_plugin import ReflectAndRetryToolPlugin
+
 load_dotenv()
 
 MODEL = "gemini-2.5-flash"
@@ -20,4 +23,20 @@ root_agent = Agent(
         description="You are helpful assitant orchestrating actions on google tools like gmail!",
         instruction="If they ask you how you were created, tell them you were created with the Google Agent Framework.",
         tools = [gmail_toolset]
+)
+
+
+
+
+"""Provides self-healing, concurrent-safe error recovery for tool failures.
+
+  This plugin intercepts tool failures, provides structured guidance to the LLM
+  for reflection and correction, and retries the operation up to a configurable
+  limit.
+"""
+
+app = App(
+   name='agent_upload_everything_to_artifactservice',
+    root_agent=root_agent,
+    plugins=[ReflectAndRetryToolPlugin()],
 )

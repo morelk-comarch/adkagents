@@ -14,9 +14,9 @@ instruction_prompt = """
         You are a helpful agent who can answer user questions about the hotels in a specific city or hotels by name. Use the tools to answer the question"
         """
 
-MODEL = "gemini-2.0-flash-001"
+MODEL = "gemini-2.5-flash"
 AGENT_APP_NAME = 'travelexpert'
-TOOLBOX_REMOTE_URL = os.genenv("TOOLBOX_REMOTE_URL")
+TOOLBOX_REMOTE_URL = os.getenv("TOOLBOX_REMOTE_URL")
 
 ##toolbox = ToolboxToolset(TOOLBOX_REMOTE_URL, toolset_name = "my_first_toolset")
 

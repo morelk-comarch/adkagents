@@ -18,7 +18,7 @@ load_dotenv()
 
 
 
-MODEL = "gemini-2.0-flash-001"
+MODEL = "gemini-2.5-flash"
 AGENT_APP_NAME = 'hrmanager'
 
 GOOGLE_CLIENT_ID = os.getenv('GOOGLE_CLIENT_ID')
@@ -55,7 +55,6 @@ toolset = OpenAPIToolset(
     auth_credential=auth_credential,
     auth_scheme=auth_scheme
 )
-
 
 root_agent = Agent(
         model=MODEL,

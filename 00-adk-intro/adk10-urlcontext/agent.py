@@ -6,8 +6,8 @@ from google.adk.tools.url_context_tool  import UrlContextTool
 
 load_dotenv()
 
-MODEL = "gemini-2.0-flash-001"
-AGENT_APP_NAME = 'gdrive_manager_with_auth'
+MODEL = "gemini-2.5-flash"
+AGENT_APP_NAME = 'urlcontextmanager'
 
 load_any_page_tool = UrlContextTool()
 

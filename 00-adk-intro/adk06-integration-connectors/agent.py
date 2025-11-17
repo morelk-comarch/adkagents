@@ -6,7 +6,7 @@ from google.adk.tools.application_integration_tool.application_integration_tools
 
 load_dotenv()
 
-MODEL = "gemini-2.0-flash-001"
+MODEL = "gemini-2.5-flash"
 AGENT_APP_NAME = 'personalagent'
 
 PROJECT_ID=os.environ["GOOGLE_CLOUD_PROJECT"]
@@ -16,8 +16,8 @@ APPLICATION_INTEGRATION_LOCATION = "europe-central2"
 gdrive_connection_toolset = ApplicationIntegrationToolset(
             project=PROJECT_ID, 
             location=APPLICATION_INTEGRATION_LOCATION, 
-            connection="gdrive-connection", ##replace with connection name "projects/genai-app-builder/locations/europe-central2/connections/gdrive-connection", ##
-            entity_operations={}, ##{"Entity_One": ["LIST","CREATE"], "Entity_Two": []},#empty list for actions means all operations on the entity are supported.
+            connection="gdrive-connection", 
+            entity_operations={}, #empty list for actions means all operations on the entity are supported.
             actions=["GET_files"], 
             tool_name_prefix="mygdrive",
             tool_instructions="Use this tool to check information on gdrive"

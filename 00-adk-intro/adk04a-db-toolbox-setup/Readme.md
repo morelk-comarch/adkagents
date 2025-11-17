@@ -1,4 +1,6 @@
-curl -O https://storage.googleapis.com/genai-toolbox/v0.7.0/linux/amd64/toolbox
+curl -L -o toolbox https://storage.googleapis.com/genai-toolbox/v0.20.0/linux/amd64/toolbox
+chmod +x toolbox
+
 chmod +x toolbox
 ./toolbox --tools-file "toolbox.yaml"
 

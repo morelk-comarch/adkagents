@@ -8,8 +8,8 @@ import requests
 
 load_dotenv()
 
-MODEL = "gemini-2.0-flash-001"
-AGENT_APP_NAME = 'enterpriseagent'
+MODEL = "gemini-2.5-flash"
+AGENT_APP_NAME = 'shoppingassistant'
 
 vertex_project_id = os.getenv("GOOGLE_CLOUD_PROJECT")
 app_engine = os.getenv("AI_APPLICATION_ID")
@@ -71,8 +71,9 @@ def search_catalog(query: str):
 
 
 instruction_prompt = """
-Use available tools to answer user question. 
-The response should include markdown table with columns image, price, currency, title.
+On every question decide if you can answer it directly or you need to search product catalog. 
+If you need to search product catalog, rewrite user query to be optimized for search engine. 
+Whenever you list products present them as markdown table with columns image, price, currency, title.
 Render URL as image. 
 Ensure the final output is valid Markdown.
 """

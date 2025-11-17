@@ -17,7 +17,7 @@ load_dotenv()
 
 ### Using Integration Connector connectors with authentication  
 
-MODEL = "gemini-2.0-flash-001"
+MODEL = "gemini-2.5-flash"
 AGENT_APP_NAME = 'gdrive_manager_with_auth'
 
 GOOGLE_CLIENT_ID = os.getenv('GOOGLE_CLIENT_ID')
@@ -51,14 +51,14 @@ auth_credential = AuthCredential(
 )
 
 gdrive_connection_toolset = ApplicationIntegrationToolset(
-            project=PROJECT_ID, # TODO: replace with GCP project of the connection
-            location=APPLICATION_INTEGRATION_LOCATION, #TODO: replace with location of the connection
-            connection="gdrive-connector-with-auth", #TODO: replace with connection name "projects/genai-app-builder/locations/europe-central2/connections/gdrive-connection", ##
-            entity_operations={},##{"Entity_One": ["LIST","CREATE"], "Entity_Two": []},#empty list for actions means all operations on the entity are supported.
-            actions=["GET_files"], #TODO: replace with actions
-            ##service_account_credentials='{...}', # optional
+            project=PROJECT_ID, 
+            location=APPLICATION_INTEGRATION_LOCATION, 
+            connection="gdrive-connector-with-auth", 
+            entity_operations={},
+            actions=["GET_files"],
             tool_name_prefix="mygdrive",
             tool_instructions="Use this tool to work with gdrive",
+            ##this is how to add auth to your agent
             auth_credential=auth_credential,
             auth_scheme=auth_scheme
  )
