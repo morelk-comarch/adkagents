@@ -1,0 +1,84 @@
+{
+  "scenarios": [
+    {
+      "starting_prompt": "I have Comarch DMS and Optima. How can I automatically generate cost documents in Optima?",
+      "conversation_plan": "Ask if a ready example of such a 'generator' is available and where to find it."
+    },
+    {
+      "starting_prompt": "What was the Operating Profit of the Comarch Group in Q4 2024? How does this compare to Q4 2023?",
+      "conversation_plan": "Ask for these values in thousand PLN and for the calculation of the percentage change (increase/decrease) year-on-year."
+    },
+    {
+      "starting_prompt": "I want to use DMS on mobile devices, but I have a local, stationary version of ERP Optima (on-premise). Will this work correctly?",
+      "conversation_plan": "Ask if a demo version of the mobile DMS application is available for testing."
+    },
+    {
+      "starting_prompt": "Is Comarch OCR capable of reading items on purchase invoices or warehouse documents?",
+      "conversation_plan": "Ask for an explanation of what Comarch OCR currently recognizes and when the feature for recognizing positions is planned."
+    },
+    {
+      "starting_prompt": "What was the total sales revenue of the Comarch Group for the entire year 2024 (Q1-Q4) and how did this compare to 2023?",
+      "conversation_plan": "Ask for the value in thousand PLN and the percentage increase/decrease."
+    },
+    {
+      "starting_prompt": "Can Comarch DMS integrate with ERP systems from other vendors, such as SAP Hana?",
+      "conversation_plan": "Ask if such integration is possible and what the scope of integration depends on."
+    },
+    {
+      "starting_prompt": "I need to integrate Comarch DMS with an email inbox. Is this possible and where can I find configuration information?",
+      "conversation_plan": "Also ask if it is possible to connect more than one email inbox."
+    },
+    {
+      "starting_prompt": "I would like to set up DMS to automatically generate emails with a list of documents for acceptance, but only once a day. Is this possible?",
+      "conversation_plan": "Ask if, after accepting one document, the system can automatically open the next one requiring acceptance."
+    },
+    {
+      "starting_prompt": "What versions of ERP Optima and ERP XL are required for the newest version of Comarch DMS (2020.0.0) to work with?",
+      "conversation_plan": "Also ask what other Comarch ERP systems DMS cooperates with."
+    },
+    {
+      "starting_prompt": "What was the Comarch Group's EBITDA in Q4 2024 (in thousand PLN) and what was the percentage increase compared to Q4 2023?",
+      "conversation_plan": "Ask what the EBITDA was for the whole year 2024 (Q1-Q4) and what the increase was compared to 2023."
+    },
+    {
+      "starting_prompt": "Can Comarch DMS be used in smaller companies, such as accounting offices?",
+      "conversation_plan": "Ask for the justification of this possibility."
+    },
+    {
+      "starting_prompt": "Who is the current CEO of Comarch S.A., and who is the CFO?",
+      "conversation_plan": "Ask for the name and surname of the Chairman of the Supervisory Board."
+    },
+    {
+      "starting_prompt": "Does Comarch OCR recognize bank account numbers (IBAN) and data from scans of paper documents?",
+      "conversation_plan": "Ask what quality the scans must be for the OCR to work correctly."
+    },
+    {
+      "starting_prompt": "Do I need a separate license to use DMS via the browser (web) than for the desktop application?",
+      "conversation_plan": "Ask on what basis Comarch DMS is licensed."
+    },
+    {
+      "starting_prompt": "In the Commercial Bookkeeping module (Księga Handlowa) in Comarch ERP Optima, what are settlement accounts used for and what functionality was added in version 15.0?",
+      "conversation_plan": "Ask what the basic types of accounts in the program are."
+    },
+    {
+      "starting_prompt": "What percentage of Comarch Group's revenue in Q4 2024 came from Poland, and what percentage came from the DACH region?",
+      "conversation_plan": "Ask for the total revenue in thousand PLN for Q4 2024."
+    },
+    {
+      "starting_prompt": "How does Comarch DMS notify an employee about a document for realization if they are not logged into the application?",
+      "conversation_plan": "Ask if the notification can also appear on a phone."
+    },
+    {
+      "starting_prompt": "In DMS, I want to set up the cost acceptance process so that the system checks if the budget is exceeded. Is this possible?",
+      "conversation_plan": "Ask which control is used to inform about and block the transfer of the document to the next stage."
+    },
+    {
+      "starting_prompt": "Does Comarch DMS allow electronic signing of PDF documents with a qualified certificate?",
+      "conversation_plan": "Ask in which version this functionality was introduced and in which application it is available."
+    },
+    {
+      "starting_prompt": "What is Comarch Data Warehouse Manager (DWM) and what is the ETL process used for in its context?",
+      "conversation_plan": "Ask if DWM supports loading data from JSON files and what the main directions of DWM development are."
+    }
+  ]
+}

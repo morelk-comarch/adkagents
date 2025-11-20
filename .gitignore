@@ -17,3 +17,5 @@ requirements142.txt
 toolbox
 __private*/
 */*/toolbox
+*evalset_result.json*
+*.html

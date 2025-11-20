@@ -47,7 +47,6 @@ auth_credential = AuthCredential(
     ),
 )
 
-##print(openapi_schema)
 
 toolset = OpenAPIToolset(
     spec_str=openapi_schema, 

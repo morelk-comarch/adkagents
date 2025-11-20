@@ -26,8 +26,6 @@ root_agent = Agent(
 )
 
 
-
-
 """Provides self-healing, concurrent-safe error recovery for tool failures.
 
   This plugin intercepts tool failures, provides structured guidance to the LLM
@@ -36,7 +34,11 @@ root_agent = Agent(
 """
 
 app = App(
-   name='agent_upload_everything_to_artifactservice',
+    name="adk08a-google-gmail-toolset-retry",
     root_agent=root_agent,
-    plugins=[ReflectAndRetryToolPlugin()],
+    plugins=[ReflectAndRetryToolPlugin(
+       name="reflect_retry_tool_plugin", 
+       max_retries=3)
+    ]
+    ,
 )

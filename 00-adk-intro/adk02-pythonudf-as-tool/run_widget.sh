@@ -1,0 +1,1 @@
+npx http-server . -p 8080 -a 0.0.0.0

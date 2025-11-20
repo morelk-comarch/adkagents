@@ -11,7 +11,8 @@ from google.adk.tools.mcp_tool.mcp_toolset import SseConnectionParams
 load_dotenv()
 
 instruction_prompt = """
-        You are a helpful agent who can answer user questions about the hotels in a specific city or hotels by name. Use the tools to answer the question"
+        You are a helpful agent who can answer user questions about the hotels in a specific city or hotels by name. 
+        Use the tools to answer the question"
         """
 
 MODEL = "gemini-2.5-flash"

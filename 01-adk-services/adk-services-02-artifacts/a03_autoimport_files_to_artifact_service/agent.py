@@ -20,7 +20,7 @@ MODEL = "gemini-2.5-flash"
 AGENT_APP_NAME = 'artistagent'
 
 
-# Parent agent uses the AgentTool
+
 root_agent = LlmAgent(
     name=AGENT_APP_NAME,
     model=MODEL,
@@ -29,8 +29,8 @@ root_agent = LlmAgent(
     tools=[load_artifacts],
 )
 
-##app = App(
-##    name='agent_upload_everything_to_artifactservice',
-##    root_agent=root_agent,
-##    plugins=[SaveFilesAsArtifactsPlugin()],
-##)
+app = App(
+    name='a03_autoimport_files_to_artifact_service',
+    root_agent=root_agent,
+    plugins=[SaveFilesAsArtifactsPlugin()],
+)
